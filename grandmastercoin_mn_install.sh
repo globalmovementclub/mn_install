@@ -22,7 +22,8 @@ set -o errexit
 
 # OS_VERSION_ID=`gawk -F= '/^VERSION_ID/{print $2}' /etc/os-release | tr -d '"'`
 
-sudo apt-get update && sudo apt-get upgrade -y
+sudo apt-get update
+DEBIAN_FRONTEND=noninteractive sudo apt-get -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" upgrade
 sudo apt install curl wget git python3 python3-pip python-virtualenv -y
 
 GMC_DAEMON_USER_PASS=`head /dev/urandom | tr -dc A-Za-z0-9 | head -c 32 ; echo ""`
