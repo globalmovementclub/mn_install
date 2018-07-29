@@ -33,9 +33,9 @@ MN_EXTERNAL_IP=`curl -s -4 ifconfig.co`
 
 sudo useradd -U -m grandmastercoin -s /bin/bash
 echo "grandmastercoin:${GMC_DAEMON_USER_PASS}" | sudo chpasswd
-sudo wget https://github.com/grandmastercoin/grandmastercoin/releases/download/v0.7.5.2/grandmastercoin-0.7.5.2-cli-linux.tar.gz --directory-prefix /home/grandmastercoin/
-sudo tar -xzvf /home/grandmastercoin/grandmastercoin-0.7.5.2-cli-linux.tar.gz -C /home/grandmastercoin/
-sudo rm /home/grandmastercoin/grandmastercoin-0.7.5.2-cli-linux.tar.gz
+sudo wget https://github.com/grandmastercoin/grandmastercoin/releases/download/v0.7.6.2/grandmastercoin-0.7.6.2-cli-linux.tar.gz --directory-prefix /home/grandmastercoin/
+sudo tar -xzvf /home/grandmastercoin/grandmastercoin-0.7.6.2-cli-linux.tar.gz -C /home/grandmastercoin/
+sudo rm /home/grandmastercoin/grandmastercoin-0.7.6.2-cli-linux.tar.gz
 sudo mkdir /home/grandmastercoin/.grandmastercoincore/
 sudo chown -R grandmastercoin:grandmastercoin /home/grandmastercoin/grandmastercoin*
 sudo chmod 755 /home/grandmastercoin/grandmastercoin*
