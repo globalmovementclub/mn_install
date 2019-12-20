@@ -68,7 +68,8 @@ EOF
 sudo systemctl enable gmc
 sudo systemctl start gmc
 echo "Booting GMC node and creating keypool"
-sleep 120
+echo "This could take a couple of minutes..."
+sleep 240
 
 MNGENKEY=`sudo -H -u gmc /home/gmc/gmc-cli masternode genkey`
 echo -e "masternode=1\nmasternodeprivkey=${MNGENKEY}\nexternalip=${MN_EXTERNAL_IP}:3234" | sudo tee -a /home/gmc/.gmc/gmc.conf
