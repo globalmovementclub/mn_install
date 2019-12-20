@@ -75,7 +75,7 @@ echo -e "masternode=1\nmasternodeprivkey=${MNGENKEY}\nexternalip=${MN_EXTERNAL_I
 sudo systemctl restart gmc
 
 echo "Installing sentinel engine"
-sudo git clone https://github.com/gmc/sentinel.git /home/gmc/sentinel/
+sudo git clone https://github.com/globalmovementclub/sentinel.git /home/gmc/sentinel/
 sudo chown -R gmc:gmc /home/gmc/sentinel/
 cd /home/gmc/sentinel/
 sudo -H -u gmc virtualenv -p python3 ./venv
