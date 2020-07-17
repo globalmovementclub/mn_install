@@ -41,7 +41,7 @@ sudo chown -R gmc:gmc /home/gmc/gmc*
 sudo chmod 755 /home/gmc/gmc*
 echo -e "rpcuser=gmcrpc\nrpcpassword=${GMC_DAEMON_RPC_PASS}\nlisten=1\nserver=1\nrpcallowip=127.0.0.1\nmaxconnections=256" | sudo tee /home/gmc/.gmc/gmc.conf
 sudo chown -R gmc:gmc /home/gmc/.gmc/
-sudo chown 500 /home/gmc/.gmc/gmc.conf
+sudo chmod 500 /home/gmc/.gmc/gmc.conf
 
 sudo tee /etc/systemd/system/gmc.service <<EOF
 [Unit]
